@@ -1,51 +1,79 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mehmet Emin Sezgin – Link in Bio</title>
 
-    {% include meta.html %}
+  <!-- Montserrat Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
 
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #121212;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+    }
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
 
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
-  </head>
+    p.description {
+      font-size: 1rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 320px;
+    }
 
-  <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+    .link {
+      display: block;
+      width: 100%;
+      max-width: 320px;
+      margin: 0.5rem 0;
+      padding: 1rem;
+      text-align: center;
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
 
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
+    .link:hover {
+      transform: scale(1.03);
+      background-color: #e0e0e0;
+    }
 
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
-    </div>
+  <h1>Mehmet Emin Sezgin</h1>
+  <p class="description">İş Güvenliği Uzmanı Adayı • Bursasporlu</p>
 
-    <div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>
+  <a href="https://www.instagram.com/szgn_emin/" class="link" target="_blank">İnstagram</a>
+  <a href="https://x.com/szgn_emin" class="link" target="_blank">X</a>
+  <a href="https://www.linkedin.com/in/szgnemin" class="link" target="_blank">Linkedin</a>
+  <a href="mailto:mehmet@szgnemin.xyz" class="link">E-posta Gönder</a>
+  <a href="https://wa.me/905418130872" class="link" target="_blank">WhatsApp'tan Yaz</a>
 
-    {% include analytics.html %}
-  </body>
+  <footer>
+    &copy; 2025 Mehmet Emin Sezgin
+  </footer>
+
+</body>
 </html>
